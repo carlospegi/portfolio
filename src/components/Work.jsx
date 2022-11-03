@@ -3,6 +3,12 @@ import ExerciseApp from '../assets/projects/exercise-app.PNG'
 import ModernApp from '../assets/projects/modern-app.PNG'
 import DashboardApp from '../assets/projects/dashboard-app.PNG'
 const Work = () => {
+
+function op (url) {
+    window.open( url, '_blank'); 
+}
+
+
   return (
     <div name='work' className= 'md:h-screen w-full text-gray-300  bg-[#0a192f]' >
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full' >
@@ -23,12 +29,12 @@ const Work = () => {
                         React JS Application
                     </span>
                     <div className='pt-8 text-center' >
-                        <a href="/">
+                        <div onClick={()=> op('http://app-gym-cp.netlify.app')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Demo</button>
-                        </a>
-                        <a href="/">
+                        </div>
+                        <div   onClick={()=> op('https://github.com/carlospegi/muscle_app.git')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Code</button>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,12 +48,12 @@ const Work = () => {
                         React JS Application
                     </span>
                     <div className='pt-8 text-center' >
-                        <a href="/">
+                        <div   onClick={()=> op('https://modern-app.netlify.app')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Demo</button>
-                        </a>
-                        <a href="/">
+                        </div>
+                        <div onClick={()=> op('https://github.com/carlospegi/modern_app.git')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Code</button>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,12 +67,13 @@ const Work = () => {
                         React JS Application
                     </span>
                     <div className='pt-8 text-center' >
-                        <a href="/">
+                  
+                        <div onClick={()=> op('https://dashboard-cp-01.netlify.app')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Demo</button>
-                        </a>
-                        <a href="/">
+                        </div>
+                        <div onClick={()=> op('https://github.com/carlospegi/dashboard_apps.git')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Code</button>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
