@@ -13,6 +13,10 @@ const Navbar = () => {
     setNav(!nav)
   }
 
+  function op(url) {
+    window.open(url, '_blank');
+  }
+
   return (
     <div className='flex w-full h-[80px] justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
       <div>
@@ -56,22 +60,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li className='py-6 text-4xl' >
-        <Link onClick={handleClick} to='about' smooth={true} duration={500} >
+          <Link onClick={handleClick} to='about' smooth={true} duration={500} >
             About
           </Link>
         </li>
         <li className='py-6 text-4xl' >
-        <Link onClick={handleClick} to='skills' smooth={true} duration={500} >
+          <Link onClick={handleClick} to='skills' smooth={true} duration={500} >
             Skills
           </Link>
         </li>
         <li className='py-6 text-4xl' >
-        <Link onClick={handleClick} to='work' smooth={true} duration={500} >
+          <Link onClick={handleClick} to='work' smooth={true} duration={500} >
             Work
           </Link>
         </li>
         <li className='py-6 text-4xl' >
-        <Link onClick={handleClick}to='contact' smooth={true} duration={500} >
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500} >
             Contact
           </Link>
         </li>
@@ -82,33 +86,32 @@ const Navbar = () => {
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0' >
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-blue-600 '>
-            <a
+            <div
               className='flex w-full items-center justify-between text-gray-300 pl-2'
-              href="/">Linkedin
-              <FaLinkedinIn size={30} />
-            </a>
+              onClick={() => op('https://www.linkedin.com/in/carlos-perez-491637245/')}>Linkedin
+            </div>
+
+            <FaLinkedinIn size={30} />
           </li>
+
+
+
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#333333] '>
-            <a
+            <div
               className='flex w-full items-center justify-between text-gray-300 pl-2'
-              href="/">Github
-              <FaGithub size={30} />
-            </a>
+              onClick={() => op('https://github.com/carlospegi')}>Github
+            </div>
+            <FaGithub size={30} />
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#376c6b]'>
-            <a
+            <Link
+            onClick={handleClick} to='contact'
               className='flex w-full items-center justify-between text-gray-300 pl-2'
-              href="/">Email
+             >Email
               <HiOutlineMail size={30} />
-            </a>
+            </Link>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#5e5e46] '>
-            <a
-              className='flex w-full items-center justify-between text-gray-300 pl-2'
-              href="/">Resume
-              <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>

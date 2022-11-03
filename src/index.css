@@ -8,6 +8,7 @@
 @layer base {
     body {
         @apply font-[Raleway];
+        
     }
     li {
         @apply px-4;
