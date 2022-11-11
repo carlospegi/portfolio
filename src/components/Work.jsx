@@ -29,7 +29,7 @@ function op (url) {
                         React JS Application
                     </span>
                     <div className='pt-8 text-center' >
-                        <div onClick={()=> op('http://app-gym-cp.netlify.app')}>
+                        <div onClick={()=> op('https://gym-app-cp.netlify.app')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Demo</button>
                         </div>
                         <div   onClick={()=> op('https://github.com/carlospegi/muscle_app.git')}>
@@ -68,11 +68,11 @@ function op (url) {
                     </span>
                     <div className='pt-8 text-center' >
                   
-                        <div onClick={()=> op('https://dashboard-cp-01.netlify.app')}>
+                        <div onClick={()=> op('https://dashboard-cp1.netlify.app')}>
                             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Demo</button>
                         </div>
                         <div onClick={()=> op('https://github.com/carlospegi/dashboard_apps.git')}>
-                            <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font bold text-lg' >Code</button>
+                            <button className='text-center rounded-lg px-4 py-3 m-2 mt-3 bg-white text-gray-700 font bold text-lg' >Code</button>
                         </div>
                     </div>
                 </div>

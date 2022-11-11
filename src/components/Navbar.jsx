@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaTimes, FaBars, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+//import { BsFillPersonLinesFill } from 'react-icons/bs'
 import Logo from '../assets/logo1.png'
 import { Link } from 'react-scroll'
 
@@ -15,6 +15,7 @@ const Navbar = () => {
 
   function op(url) {
     window.open(url, '_blank');
+   
   }
 
   return (
@@ -51,7 +52,7 @@ const Navbar = () => {
         onClick={handleClick}
       >
         {!nav ? <FaBars /> : <FaTimes />}
-      </div>
+      </div> 
       {/* Mobile Menu */}
       <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'} >
         <li className='py-6 text-4xl' >
@@ -89,9 +90,9 @@ const Navbar = () => {
             <div
               className='flex w-full items-center justify-between text-gray-300 pl-2'
               onClick={() => op('https://www.linkedin.com/in/carlos-perez-491637245/')}>Linkedin
+            <FaLinkedinIn size={30} />
             </div>
 
-            <FaLinkedinIn size={30} />
           </li>
 
 
@@ -100,12 +101,13 @@ const Navbar = () => {
             <div
               className='flex w-full items-center justify-between text-gray-300 pl-2'
               onClick={() => op('https://github.com/carlospegi')}>Github
-            </div>
             <FaGithub size={30} />
+            </div>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#376c6b]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#376c6b]' onClick={handleClick} >
+            
             <Link
-            onClick={handleClick} to='contact'
+            to='contact'
               className='flex w-full items-center justify-between text-gray-300 pl-2'
              >Email
               <HiOutlineMail size={30} />
